@@ -1,0 +1,365 @@
+/* Root Variables */
+:root {
+    --color-dark: #1D1D1F;
+    --color-light: #FFFFFF;
+    --color-body: #f3f4f6;
+    --color-gray: #6C727F;
+    --color-border: #e6e7eb;
+    --color-black-translucent: #00000033;
+    --color-primary: #95AAD0;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    background-color: #F3F4F6;
+}
+
+.header {
+    background-image: url('assets/background-image.png');
+    width: 100%;
+    height: 39.2vh;
+    ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.header div {
+    position: relative;
+    top: 9vh;
+    font-size: 2rem;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.items-count {
+    background-color: var(--color-primary);
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    display: inline;
+    vertical-align: middle;
+    margin: 0.1rem 0.5rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 94%;
+    height: auto;
+    position: relative;
+    top: -19.1vh;
+    z-index: 2;
+}
+
+.summary {
+    background-color: var(--color-light);
+    padding: 20px;
+    border-radius: 1rem 0 0 1rem;
+    background-color: var(--color-border);
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    margin: 1rem;
+}
+
+td:first-child {
+    width: 0%;
+}
+
+
+td {
+    padding: 0.8rem;
+}
+
+.price-td {
+    text-align: end;
+}
+
+
+h3 {
+    color: var(--color-dark);
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.product-img {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+    width: 7rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+}
+
+.product img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.product-details p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.product-details span {
+    color: var(--color-gray);
+    font-size: 1.2rem;
+}
+
+hr {
+    margin: 0.8rem;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.total {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.coupon {
+    display: flex;
+    margin-top: 20px;
+}
+
+.coupon input {
+    flex-grow: 1;
+    padding: 1rem;
+    margin: .5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.coupon button {
+    padding: 1rem;
+    border: none;
+    background-color: var(--color-dark);
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 3.2rem;
+    margin: 0.5rem 0rem;
+    min-width: 160px;
+}
+
+.total p {
+    color: var(--color-gray);
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    font-size: 1.1rem;
+}
+
+.total p.main-total {
+    color: black;
+}
+
+
+
+/* Contact Form */
+.contact-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 1rem 1rem 0;
+    min-width: 488px;
+}
+
+.contact-form h3 {
+    margin: 1.5rem 0;
+    font-size: 1.3rem;
+}
+
+.form-group {
+    margin-top: 2.4rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.18rem;
+    border: 2px solid var(--color-border);
+    border-radius: 0.56rem;
+    color: var(--color-gray);
+    background-color: #f3f4f6;
+}
+
+.form-group2 {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.sec-countries {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.form-group label {
+    margin: 0.78rem 0;
+    display: block;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.3rem;
+    margin-top: 2.4rem;
+    background-color: var(--color-dark);
+    color: white;
+    border: none;
+    border-radius: .35rem;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .summary {
+        order: 1;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .contact-form {
+        order: 2;
+        margin-bottom: 20px;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    .product img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .coupon input {
+        padding: 8px;
+    }
+
+    .coupon button {
+        padding: 8px;
+    }
+}
+
+/* Responsive Design for Extra Small Devices (xs) */
+@media screen and (max-width: 575px) {
+    .container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .summary {
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .contact-form {
+        width: 100%;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    .header h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-img {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .product img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .coupon input,
+    .coupon button {
+        padding: 0.8rem;
+    }
+
+    .total p {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Responsive Design for Small Devices (sm) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+
+    .summary {
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .contact-form {
+        width: 100%;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    .header h2 {
+        font-size: 1.75rem;
+    }
+
+    .product-img {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .product img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .coupon input,
+    .coupon button {
+        padding: 1rem;
+    }
+
+    .total p {
+        font-size: 1.1rem;
+        margin: 0.7rem 0;
+    }
+}
