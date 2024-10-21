@@ -27,18 +27,20 @@ body {
 .header {
     background-image: url('assets/background-image.png');
     width: 100%;
-    height: 39.2vh;
-    ;
+    height: 50vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
     color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header div {
     position: relative;
-    top: 9vh;
+    top: -9vh;
     font-size: 2rem;
     font-weight: 700;
     display: inline-block;
